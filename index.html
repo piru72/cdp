@@ -7,7 +7,11 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   
+   <!-- Required sheets -->
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
 
 <body>
@@ -19,9 +23,9 @@
         <!-- Icon on the left -->
         <a href="#"><img class="icon" src="./assets/icons/logo.png" alt="Icon"></a>
         <!-- Links in the middle -->
-        <a href="#">About</a>
+        <a href="#about">About</a>
         <a href="#">Experience</a>
-        <a href="#">Projects</a>
+        <a href="#project">Projects</a>
         <a href="#">Contact</a>
         <!-- Buttons on the right -->
         <button class="button">Resume</button>
@@ -30,55 +34,79 @@
 
 
     <!-- Landing Page  -->
-    <div class="landing">
-        <h1>Hi, I'm Parvez Ahammed</h1>
-        <h2>I'm a student</h2>
-        <i class="fa-solid fa-angles-down"></i>
-    </div>
+
+    <section class="about-section" id="about">
+        <div class="landing">
+            <h1>Hi, I'm Parvez Ahammed</h1>
+            <h2>Living to tell a tale</h2>
+            <a href="#project"><i class="fa-solid fa-git"></i> </a>
+        </div>
+    </section>
 
 
     <!-- Featured Project -->
 
-    <div class="featured-project">
-        <!--  2 Featured project -->
-        <h2>Featured Project</h2>
-        <div class="project">
-            <img src="./assets/images/aust-buddy.jpg" alt="Project 1">
-            <h3>AUST BUDDY</h3>
-            <p>Aust buddy is a educational mobile application</p>
+    <section class="featured-project-section" id="project">
 
-            <!--  List of technology used -->
-            <ul>
-                <li>Kotlin</li>
-                <li>Firebase</li>
-                <li>Android Studio</li>
-            </ul>
+        <div class="featured-project">
+            <!--  2 Featured project -->
+            <h1>Featured Project</h2>
+                <hr>
+                <div class="project">
 
-            <!-- Available Public links -->
+                    <div class="featured-project-col-1">
+                        <img class="project-image" src="./assets/images/aust-buddy.jpg" alt="Project 1">
+                    </div>
 
-            <ul>
-                <li><a href="#">Github</a></li>
-                <li><a href="#">Play Store</a></li>
-            </ul>
-        </div>
+                    <div class="featured-project-col-2">
+                        <h3>AUST BUDDY</h3>
+                        <p>Aust buddy is a educational mobile application</p>
 
-        <div class="project">
-            <img src="./assets/images/life-at-aust.png" alt="Project 2">
-            <h3>Life @ AUST</h3>
-            <p>A story based game created around the life of students of AUST</p>
+                        <!--  List of technology used -->
+                        <hr>
+                        <ul class="inline-list">
+                            <li>Kotlin</li>
+                            <li>Firebase</li>
+                            <li>Android Studio</li>
+                        </ul>
 
-            <!--  List of technology used -->
-            <ul>
-                <li>C++ </li>
-                <li>IGraphic</li>
-                <li>Visual Studio</li>
-            </ul>
+                        <!-- Available Public links -->
 
-            <!-- Available Public links -->
-            <ul>
-                <li><a href="#">Github</a></li>
-            </ul>
-        </div>
+                        <ul class="inline-list">
+                            <li><a><i class="fab fa-git"></i></a></li>
+                            <li><a><i class="fab fa-twi"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+
+
+                <div class="project">
+                    <div class="featured-project-col-1">
+                        <h3>Life @ AUST</h3>
+                        <p>A story based game created around the life of students of AUST</p>
+
+                        <!--  List of technology used -->
+                        <hr>
+                        <ul class="inline-list">
+                            <li>C++ </li>
+                            <li>IGraphic</li>
+                            <li>Visual Studio</li>
+                        </ul>
+
+                        <!-- Available Public links -->
+                        <ul class="inline-list">
+                            <li><a href="#">Github</a></li>
+                        </ul>
+
+                    </div>
+
+                    <div class="featured-project-col-2">
+                        <img class="project-image" src="./assets/images/life-at-aust.png" alt="Project 2">
+
+                    </div>
+                </div>
+    </section>
 
 
 </body>
