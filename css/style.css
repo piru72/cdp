@@ -1,7 +1,32 @@
+/* Global styles */
 html {
     scroll-behavior: smooth;
 }
 
+body {
+    font-family: 'montserrat';
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: bold;
+}
+
+p {
+    line-height: 1.6;
+}
+
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar  */
 .navbar {
     background-color: #ffffff;
     border-color: aqua;
@@ -65,21 +90,21 @@ html {
 .about-section {
     padding: 20px 0;
     text-align: center;
-    height: 100vh;
+    height: 90vh;
     margin: 0;
-    
     display: flex;
-  
+
     justify-content: center;
-   
+
     align-items: center;
 }
 
 
 /* Featured Project */
+
 .featured-project-section {
     background-color: #f8f8f8;
-    padding: 20px 0;
+    padding: 10px 0;
     text-align: center;
 }
 
@@ -95,12 +120,24 @@ html {
 }
 
 .project-image {
-    width: 80%;
+    width: 70%; /* Set width to 100% to make images responsive */
+    height: auto; /* Allow images to adjust their height proportionally */
+ 
+    object-fit: cover;
     height: auto;
+    border-radius: 10px; /* Rounded border */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    transition: transform 0.3s ease; /* Animation transition */
+}
+
+.project-image:hover {
+    transform: scale(1.05); /* Scale up slightly on hover */
 }
 
 .project {
     display: flex;
+    margin-top: 2%;
+    margin-bottom: 4%;
 }
 
 .featured-project-col-1,
@@ -110,7 +147,7 @@ html {
 
 
 .featured-project-col-1 {
-    margin-right: 10px;
+    margin-right: 5%;
     text-align: right;
 }
 
