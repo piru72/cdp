@@ -28,3 +28,16 @@
 - - Window.screen
 -  browser local storage
 -  browser session storage
+
+## Class 4
+
+- Callback
+- Promise
+- Async and Await
+- Fetch API
+- JSON
+- Worker with JS
+
+### Assignment
+By clicking a button the worker will fetch data from jsonplaceholder and show the table data in the browser.
+Use async and await , worker , callback.
