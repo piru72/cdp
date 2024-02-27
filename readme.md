@@ -41,3 +41,14 @@
 ### Assignment
 By clicking a button the worker will fetch data from jsonplaceholder and show the table data in the browser.
 Use async and await , worker , callback.
+
+## Class 5
+
+- GitHub Commit should be meaningful
+- Git flow(Basically a framework for managing your branches)
+- Clickup (Project management tool)
+- ZZZCODE.ai (Code generation tool)
+- Github AUCorp
+- Microservices vs Monolithic
+- microservices.io
+- Serverless
