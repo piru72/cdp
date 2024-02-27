@@ -44,11 +44,13 @@ Use async and await , worker , callback.
 
 ## Class 5
 
+- Folder structure
 - GitHub Commit should be meaningful
 - Git flow(Basically a framework for managing your branches)
 - Clickup (Project management tool)
+- Generative AI
 - ZZZCODE.ai (Code generation tool)
-- Github AUCorp
-- Microservices vs Monolithic
-- microservices.io
-- Serverless
+- Github AUCorp(Github Account)
+- Microservices vs Monolithic (Architecture)
+- microservices.io ( A website for microservices)
+- Serverless(Will be discussed in the next class)
