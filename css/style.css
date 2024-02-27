@@ -1,0 +1,179 @@
+/* Global styles */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'montserrat';
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: bold;
+}
+
+p {
+    line-height: 1.6;
+}
+
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar  */
+.navbar {
+    background-color: #ffffff;
+    border-color: aqua;
+    border-width: 2px;
+    overflow: hidden;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+
+
+.navbar a {
+    float: left;
+    display: block;
+    color: #000000;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+
+.navbar a:hover {
+    background-color: #ffffff;
+    color: black;
+}
+
+
+.navbar::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+.icon {
+    display: block;
+    width: 20%;
+}
+
+
+.button {
+    float: right;
+    display: block;
+    padding: 14px 20px;
+    background-color: #ffffff;
+    border-color: rgb(201, 10, 10);
+    color: rgb(0, 0, 0);
+    border: 1px solid;
+    border-radius: 1rem;
+    cursor: pointer;
+    margin-right: 2px;
+}
+
+.button:hover {
+    background-color: #d3d3d3;
+}
+
+/* About section */
+
+.about-section {
+    padding: 20px 0;
+    text-align: center;
+    height: 90vh;
+    margin: 0;
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+
+/* Featured Project */
+
+.featured-project-section {
+    background-color: #f8f8f8;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.featured-project {
+    background-color: #f8f8f8;
+    border-color: aqua;
+    border-width: 2px;
+    overflow: hidden;
+    padding: 20px;
+    margin: 20px auto;
+    text-align: center;
+    width: 70%;
+}
+
+.project-image {
+    width: 70%; /* Set width to 100% to make images responsive */
+    height: auto; /* Allow images to adjust their height proportionally */
+ 
+    object-fit: cover;
+    height: auto;
+    border-radius: 10px; /* Rounded border */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    transition: transform 0.3s ease; /* Animation transition */
+}
+
+.project-image:hover {
+    transform: scale(1.05); /* Scale up slightly on hover */
+}
+
+.project {
+    display: flex;
+    margin-top: 2%;
+    margin-bottom: 4%;
+}
+
+.featured-project-col-1,
+.featured-project-col-2 {
+    flex: 1;
+}
+
+
+.featured-project-col-1 {
+    margin-right: 5%;
+    text-align: right;
+}
+
+.featured-project-col-2 {
+    margin-left: 10px;
+    text-align: left;
+}
+
+.inline-list {
+    list-style: none;
+    padding: 0;
+}
+
+.inline-list li {
+    display: inline;
+    margin-right: 10px;
+}
+
+h1 {
+    font-size: 4em;
+    color: #000000;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2em;
+    color: #000000;
+    text-align: center;
+}
