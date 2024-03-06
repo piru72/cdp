@@ -131,3 +131,28 @@ Refactoring Guru
 - Functional Programming
 - No strict type
 
+
+## Class 7
+- VDOM
+- React Project Initialization With Vite
+- Advantages of Component 
+    - Fundamental building block
+    - Reusability
+    - Modularity
+- Folder Structure of Boilerplate
+- Details of JSX
+    - Every tag must be closed or self-closed
+    - Will return only one parent element
+    - JSX transpiled to js(babel)
+    - Class is replaced by className
+    - Wrap js witth {}
+
+- Functional Component
+- Class Component
+    - State Management
+    - Constructor
+    - Render
+    - Bind method
+
+- State is Immutable
+- Immer.js
