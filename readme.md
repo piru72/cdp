@@ -133,7 +133,39 @@ Refactoring Guru
 
 
 ## Class 7
+- NODE
+   - runtime environment
+- NVM
+- imperative vs declarative
+    - imperative programming repeats code
+    - declarative programming more like a function
 - VDOM
+    - copies the real DOM
+    - compares the real DOM with the VDOM
+    - updates the real DOM
+    - only updates the part of the real DOM
+- React compares in reconciliation
+    - React will compare the VDOM with the real DOM
+    - React will update the real DOM
+    - React will only update the part of the real DOM
+- CSSOM
+    - CSS Object Model
+- merging CSSOM and browser DOM is slow
+```mermaid
+graph LR
+A[Browser DOM] -->|fast| B[Merging]
+C[CSSOM] -->|Slow| B
+B -->|Slow| D[UI]
+```
+
+- Why react?
+    - Declarative
+    - Reusable
+    - One Way data flow / One Way binding
+    - updates in batch
+    - Effcient update of the DOM
+- Why react is bad for SEO?
+- Vite provides a faster development environment throught hot reload
 - React Project Initialization With Vite
 - Advantages of Component 
     - Fundamental building block
@@ -145,7 +177,8 @@ Refactoring Guru
     - Will return only one parent element
     - JSX transpiled to js(babel)
     - Class is replaced by className
-    - Wrap js witth {}
+    - Wrap js wi th {}
+    - Is a syntax extension of JS
 
 - Functional Component
 - Class Component
@@ -156,3 +189,37 @@ Refactoring Guru
 
 - State is Immutable
 - Immer.js
+## Class 8 
+- LifeCycle Method
+    - ComponentDidMount()
+        - Called after the component is mounted for the first time
+        - Making Network Request / api call / interect with DOM
+    - shouldComponentUpdate()
+        - return boolean Value(true/false)
+        - called before rendering
+        - unnecessary rendering can be avoided
+        - optimization in performance
+    - componentDidUpdate()
+        - Called after the component is updated
+    - componentWillUnmount()
+        - Called before the component is removed from the DOM
+
+
+## Class 14
+### Class Work
+Process
+- Version 
+- platform
+- cpu usage
+
+OS Module
+- Cpu details
+- Usage
+
+FS Module
+- file write
+
+### Class topic
+- Why Koa.js?
+
+

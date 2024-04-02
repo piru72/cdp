@@ -1,0 +1,68 @@
+Node.js Version: v21.6.2
+
+Platform: win32
+
+User CPU time: 62 seconds
+
+CPU 0:
+Model: AMD Ryzen 5 3400G with Radeon Vega Graphics    
+Speed: 3700 MHz
+User Time: 4207109
+Sys Time: 4530562
+Idle Time: 34473640
+------------------
+
+CPU 1:
+Model: AMD Ryzen 5 3400G with Radeon Vega Graphics    
+Speed: 3700 MHz
+User Time: 4259093
+Sys Time: 1685953
+Idle Time: 37265687
+------------------
+
+CPU 2:
+Model: AMD Ryzen 5 3400G with Radeon Vega Graphics    
+Speed: 3700 MHz
+User Time: 5830296
+Sys Time: 3440343
+Idle Time: 33940109
+------------------
+
+CPU 3:
+Model: AMD Ryzen 5 3400G with Radeon Vega Graphics    
+Speed: 3700 MHz
+User Time: 3473984
+Sys Time: 1962890
+Idle Time: 37773859
+------------------
+
+CPU 4:
+Model: AMD Ryzen 5 3400G with Radeon Vega Graphics    
+Speed: 3700 MHz
+User Time: 5740640
+Sys Time: 2649062
+Idle Time: 34821046
+------------------
+
+CPU 5:
+Model: AMD Ryzen 5 3400G with Radeon Vega Graphics    
+Speed: 3700 MHz
+User Time: 3829140
+Sys Time: 1718250
+Idle Time: 37663343
+------------------
+
+CPU 6:
+Model: AMD Ryzen 5 3400G with Radeon Vega Graphics    
+Speed: 3700 MHz
+User Time: 6513656
+Sys Time: 2363781
+Idle Time: 34333296
+------------------
+
+CPU 7:
+Model: AMD Ryzen 5 3400G with Radeon Vega Graphics    
+Speed: 3700 MHz
+User Time: 4175328
+Sys Time: 1933031
+Idle Time: 37102359
