@@ -1,68 +1,101 @@
 const Koa = require('koa');
-const app = new Koa();
 const bodyParser = require('koa-bodyparser');
+const { getCurrentTimeWithSeconds, isAdmin, getFullUserList, createUsers } = require('./utils.js');
 
-const a = 10;
-const b = 20;
-let result = 0;
+const app = new Koa();
+
+
+
 app.use(bodyParser());
-app.use(async (ctx, next) => {
-    console.log('a:', a);
-    console.log('b:', b);
-    result = a + b;
-    await next();
-});
 
 let requestInboundTime = '';
-
-const getCurrentTimeWithSeconds = () => {
-    const now = new Date();
-    const hours = now.getHours().toString().padStart(2, '0');
-    const minutes = now.getMinutes().toString().padStart(2, '0');
-    const seconds = now.getSeconds().toString().padStart(2, '0');
-
-    return `${hours}:${minutes}:${seconds}`;
-};
+// GET /
 app.use((ctx, next) => {
     requestInboundTime = getCurrentTimeWithSeconds();
-    // This is the base URL
+    
     if (ctx.url === '/') {
-        const welcomeMessage = 'Welcome to EcoSync API!';
+        const welcomeMessage = 'Welcome to EcoSync / API!';
         ctx.body = {
             message: welcomeMessage,
             requestInboundTime: requestInboundTime,
             requestOutboundTime: getCurrentTimeWithSeconds(),
         };
         ctx.status = 200;
+        return;
     }
+
     return next();
 
 });
 
+
+// GET /users
 app.use((ctx, next) => {
     
-    if (ctx.url === '/users') {
-        ctx.body = {
-            calculation: { a, b, result },
-            method: ctx.method,
-            url: ctx.url,
-            status: ctx.status,
-            requestBody: ctx.request.body,
-            requestInboundTime: requestInboundTime,
-            requestOutboundTime: getCurrentTimeWithSeconds(),
-        };
+    if (ctx.url === '/users' && ctx.method === 'GET') {
+        const welcomeMessage = 'Welcome to EcoSync GET /users API!';
+
+        if (isAdmin(ctx.request.body)) {
+            ctx.body = {
+                response: getFullUserList(),
+                requestInboundTime: requestInboundTime,
+                requestOutboundTime: getCurrentTimeWithSeconds(),
+            };
+
+        }
+        else {
+            ctx.body = {
+                response: 'Access Denied',
+                message: welcomeMessage,
+                requestInboundTime: requestInboundTime,
+                requestOutboundTime: getCurrentTimeWithSeconds(),
+            };
+
+        }
+
         ctx.status = 200;
+        return;
 
     }
 
+    return next();
+
+})
+
+// POST /users
+
+app.use((ctx, next) => {
+
+    if (ctx.url === '/users' && ctx.method === 'POST') {
+        const welcomeMessage = 'Welcome to EcoSync POST /users API!';
+
+        if (isAdmin(ctx.request.body)) {
+            ctx.body = {
+                response: createUsers(ctx.request.body),
+                message: welcomeMessage,
+                requestInboundTime: requestInboundTime,
+                requestOutboundTime: getCurrentTimeWithSeconds(),
+            };
+
+        }
+        else {
+            ctx.body = {
+                response: 'Access Denied',
+                message: welcomeMessage,
+                requestInboundTime: requestInboundTime,
+                requestOutboundTime: getCurrentTimeWithSeconds(),
+            };
+
+        }
+
+        ctx.status = 200;
+        return;
+
+    }
 
     return next();
 
-
-
-
-
-})
+});
 
 app.use((ctx, next) => {
     if (ctx.url === '/forloop') {
@@ -81,10 +114,6 @@ app.use((ctx, next) => {
     }
 
     return next();
-
-
-
-
 
 })
 
