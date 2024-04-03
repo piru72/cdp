@@ -221,5 +221,13 @@ FS Module
 
 ### Class topic
 - Why Koa.js?
+- Server using Koa.js
+- Middleware
+
+## Class 15
+- https://www.w3resource.com/node.js/nodejs-programming-model.php
+- Work with modules by making small functions
+- HTTPS status code
+- validator js
 
 
