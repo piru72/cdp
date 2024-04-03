@@ -229,5 +229,7 @@ FS Module
 - Work with modules by making small functions
 - HTTPS status code
 - validator js
+- JWT Token
+
 
 
