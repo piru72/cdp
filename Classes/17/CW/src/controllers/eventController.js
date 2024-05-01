@@ -1,5 +1,6 @@
 const { addAnEvent, getFullEventList, getEventDetails } = require('../services/eventService.js');
 const { getCurrentTimeWithSeconds } = require('../services/utils.js');
+const { Events } = require('../models/events.js')
 
 const createEvent = async (ctx) => {
     const requestInboundTime = getCurrentTimeWithSeconds();
@@ -44,8 +45,32 @@ const getAllEvents = async (ctx) => {
     };
 };
 
+
+const deleteEvent = async (ctx) => {
+
+    const requestInboundTime = getCurrentTimeWithSeconds();
+    try {
+        const id = ctx.params.id;
+        const verdict = await Events.deleteEvent(id);
+        
+        const responseBody = {
+            statusDetails : verdict.statusDetails,
+            requestInboundTime: requestInboundTime,
+            requestOutboundTime: getCurrentTimeWithSeconds(),
+           
+        }
+        ctx.status = verdict.statusCode;
+        ctx.body = responseBody;
+
+    } catch (error) {
+        ctx.status = 500;
+        ctx.body = { error: 'Internal Server Error' };
+    }
+};
+
 module.exports = {
     createEvent,
     getEventById,
-    getAllEvents
+    getAllEvents,
+    deleteEvent
 };

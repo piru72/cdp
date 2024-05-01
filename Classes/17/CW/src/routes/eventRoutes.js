@@ -1,12 +1,14 @@
 const Router = require('koa-router');
 const { createEvent,
     getEventById,
-    getAllEvents } = require('../controllers/eventController.js');
+    getAllEvents,
+    deleteEvent } = require('../controllers/eventController.js');
 
 const router = new Router();
 
-router.post('/', createEvent);
-router.get('/:id', getEventById);
 router.get('/', getAllEvents);
+router.get('/:id', getEventById);
+router.post('/', createEvent);
+router.delete('/:id', deleteEvent);
 
 module.exports = router;

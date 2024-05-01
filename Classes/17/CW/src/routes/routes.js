@@ -6,9 +6,11 @@ const eventRoutes = require('./eventRoutes.js');
 const panelRoutes = require('./panelRoutes');
 const academisSessionRoutes = require('./academicSessionRoutes');
 
+// Create a new router instance
 const router = new Router();
 
 
+// Root of the API
 router.get('/', (ctx) => {
     const requestInboundTime = getCurrentTimeWithSeconds();
     ctx.body = {
@@ -18,7 +20,7 @@ router.get('/', (ctx) => {
     };
 });
 
-// Define route sets as an array
+// Define route sets as an array along with their prefixes and routes
 const routeSets = [
     { prefix: '/transactions', routes: transactionRoutes },
     { prefix: '/events', routes: eventRoutes },
