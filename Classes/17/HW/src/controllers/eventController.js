@@ -57,14 +57,10 @@ const deleteEvent = async (ctx) => {
             statusDetails : verdict.statusDetails,
             requestInboundTime: requestInboundTime,
             requestOutboundTime: getCurrentTimeWithSeconds(),
-           
         }
-        ctx.status = verdict.statusCode;
-        ctx.body = responseBody;
-
+        ctx.response.ok('Event not found' , responseBody);
     } catch (error) {
-        ctx.status = 500;
-        ctx.body = { error: 'Internal Server Error' };
+        ctx.response.internalError('Internal Server Error');
     }
 };
 

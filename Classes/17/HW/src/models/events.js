@@ -22,10 +22,7 @@ const Events = {
         const session = await getAcademicSessionDetails();
 
         if (!session) {
-            verdict = {
-                statusCode : 404,
-                statusDetails : "Error deleting event. No academic session found.",
-            }
+            
         }
         else {
             

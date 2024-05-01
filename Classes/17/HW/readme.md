@@ -1,3 +1,3 @@
-Complete the code segregation
-- Router
-- MVC pattern
+- Response Handler
+- Error Handler
+- Usage of Koa-Body package instead of body-parser
