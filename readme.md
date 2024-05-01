@@ -231,5 +231,17 @@ FS Module
 - validator js
 - JWT Token
 
+## Class 16
+- Koa router
+- CORS (Cross-Origin Resource Sharing)
+- CORS and Koa
+
+## Class 17
+- Router
+- MVC Pattern
+- Response Handler
+- Error Handler
+- Usage of Koa-Body package instead of body-parser
+
 
 
