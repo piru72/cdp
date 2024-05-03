@@ -3,6 +3,9 @@ const { updateAcademicSessionDetails,
      getAcademicSessionDetails
     ,validateAcademicSession } = require('../services/academicSessionService.js');
 
+const reponseVerdicts = require('../constants/respone.js');
+const responeSummary = require('../constants/respone.js');
+
 
 
 const updateAcademicSession = async (ctx) => {
@@ -11,9 +14,9 @@ const updateAcademicSession = async (ctx) => {
     
     if (!validateAcademicSession(ctx.request.body.academicSession)) {
         ctx.body = {
-            responeSummary: 'Update academic session',
+            responeSummary: responeSummary.UPDATE_ACADEMIC_SESSION,
             requestInboundTime: requestInboundTime,
-            verdict: 'Invalid academic session',
+            verdict: reponseVerdicts.INVALID_ACADEMIC_SESSION,
             requestOutboundTime: getCurrentTimeWithSeconds(),
         };
         ctx.status = 400;
@@ -24,7 +27,7 @@ const updateAcademicSession = async (ctx) => {
         const verdict = await updateAcademicSessionDetails(ctx.request.body.academicSession);
         
         ctx.body = {
-            responeSummary: 'Update academic session',
+            responeSummary: responeSummary.UPDATE_ACADEMIC_SESSION,
             requestInboundTime: requestInboundTime,
             verdict: verdict,
             requestOutboundTime: getCurrentTimeWithSeconds(),
@@ -32,9 +35,9 @@ const updateAcademicSession = async (ctx) => {
         ctx.status = 201;
     } catch (error) {
         ctx.body = {
-            responeSummary: 'Update academic session',
+            responeSummary: responeSummary.UPDATE_ACADEMIC_SESSION,
             requestInboundTime: requestInboundTime,
-            verdict: 'Error updating academic session',
+            verdict: reponseVerdicts.ERROR_UPDATING_ACADEMIC_SESSION,
             requestOutboundTime: getCurrentTimeWithSeconds(),
         };
         ctx.status = 500; 
@@ -45,7 +48,7 @@ const getAcademicSession = async(ctx) => {
     const requestInboundTime = getCurrentTimeWithSeconds();
 
     ctx.body = {
-        responeSummary: 'Details of a specific academic session',
+        responeSummary: responeSummary.DETAILS_OF_A_SPECIFIC_ACADEMIC_SESSION,
         requestInboundTime: requestInboundTime,
         requestOutboundTime: getCurrentTimeWithSeconds(),
     };
@@ -53,11 +56,11 @@ const getAcademicSession = async(ctx) => {
     const academicSession = await getAcademicSessionDetails(ctx.params.id);
     if (!academicSession) {
         ctx.status = 404;
-        ctx.body.verdict = "Academic session not found!";
+        ctx.body.verdict = responseVerdicts.ACADEMIC_SESSION_NOT_FOUND;
         return;
     }
 
-    ctx.body.verdict = "Academic session found!";
+    ctx.body.verdict = responseVerdicts.ACADEMIC_SESSION_FOUND;
     ctx.body.academicSession = academicSession;
     ctx.status = 200;
 };

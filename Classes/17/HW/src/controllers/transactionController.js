@@ -1,11 +1,11 @@
 const validatorJs = require('validatorjs');
 const { getCurrentTimeWithSeconds } = require('../services/utils.js');
 const { getTransactionList, getFullTransascionList, addATransaction, updateATransaction } = require('../services/transactionService.js');
-
+const {responseSummary , responseVerdicts} = require('../constants/response.js');
 const getAllTransactions = async (ctx) => {
     const requestInboundTime = getCurrentTimeWithSeconds();
     ctx.body = {
-        responseSummary: 'List of all transactions in the system',
+        responseSummary: responseSummary.LIST_OF_ALL_TRANSACTION,
         transactions: getFullTransascionList(),
         requestInboundTime: requestInboundTime,
         requestOutboundTime: getCurrentTimeWithSeconds(),
@@ -31,7 +31,7 @@ const addTransaction = async (ctx) => {
     if (validation.fails()) {
         ctx.status = 400;
         ctx.body = {
-            responseSummary: 'Validation failed',
+            responseSummary: responseSummary.VALIDATION_FAILED,
             errors: validation.errors.all(),
             requestInboundTime: requestInboundTime,
             requestOutboundTime: getCurrentTimeWithSeconds(),
@@ -40,7 +40,7 @@ const addTransaction = async (ctx) => {
     }
 
     ctx.body = {
-        responseSummary: 'Add a transaction to the system',
+        responseSummary: responseSummary.ADD_A_TRANSACTION,
         verdict: addATransaction(ctx.request.body),
         requestInboundTime: requestInboundTime,
         requestOutboundTime: getCurrentTimeWithSeconds(),
@@ -51,7 +51,7 @@ const addTransaction = async (ctx) => {
 const getTransactionsByUserId = async (ctx) => {
     const requestInboundTime = getCurrentTimeWithSeconds();
     ctx.body = {
-        responseSummary: 'List of all transaction of a user',
+        responseSummary: responseSummary.LIST_OF_ALL_TRANSACTION_OF_A_USER,
         userTransactions: getTransactionList(ctx.params.id),
         requestInboundTime: requestInboundTime,
         requestOutboundTime: getCurrentTimeWithSeconds(),
@@ -77,7 +77,7 @@ const updateTransactionById = async (ctx) => {
     if (validation.fails()) {
         ctx.status = 400;
         ctx.body = {
-            responseSummary: 'Validation failed',
+            responseSummary: responseSummary.VALIDATION_FAILED,
             errors: validation.errors.all(),
             requestInboundTime: requestInboundTime,
             requestOutboundTime: getCurrentTimeWithSeconds(),
@@ -87,12 +87,12 @@ const updateTransactionById = async (ctx) => {
 
     const verdict = updateATransaction(ctx.request.body);
     ctx.body = {
-        responseSummary: 'Update a transaction of the system',
+        responseSummary: responseSummary.UPDATE_A_TRANSACTION,
         verdict: verdict,
         requestInboundTime: requestInboundTime,
         requestOutboundTime: getCurrentTimeWithSeconds(),
     };
-    ctx.status = (verdict === "Transaction updated successfully!") ? 200 : 404;
+    ctx.status = (verdict === responseVerdicts.TRANSACTION_UPDATED_SUCCESSFULLY) ? 200 : 404;
 };
 
 module.exports = { getAllTransactions, addTransaction, getTransactionsByUserId, updateTransactionById };
