@@ -243,5 +243,108 @@ FS Module
 - Error Handler
 - Usage of Koa-Body package instead of body-parser
 
+## Class 18
+List of things to Install 
+- DynamoDB local
+- NoSQL workbench
+- Docker Desktop
+- LocalStack ( Github Repo - Gives More felxibility,Docker Image)  -> Gives Proper AWS Environment in Local Experience
 
+
+
+
+SQL DB  Design Thinking Process
+1. Relation
+2. Normalization
+3. Indexing
+4. Query Optimization
+5. Diamond Table (Intermediate Table between two tables)
+
+SQL Works well with Monolithic Architecture . But creates problem with Scaling Issues and Horizonta Scaling is costly in SQL.
+
+NO SQL DB Design Thinking Process
+- Query Driven
+- Write Heavy and Read simple  (Store as many relavant data as possible)
+- LSI , GSI
+    - LSI - Local Secondary Index
+    - GSI - Global Secondary Index
+- How data is stored in the engine
+
+
+DaynamoDB
+- NoSQL Database
+- Works in Key-Value Pair
+- DDB Key - PK - HashKey + SortKey /RangeKey(Composite Key)
+- Supporing operation (scan[] , query[], get{} ,put  , batch write)
+    - Scan - Get all the data from the table
+    - Query - Get the data based on the key
+    - Get - Get the data based on the key
+    - Put - Insert the data
+- Avoid Scanning as it is costly
+
+Difference between MongoDB and DynamoDB
+- MongoDB has incosistent data
+- MongoDB connectivity issue and configuration with AWS
+
+
+Financial Service -
+- middleware - logger - error handler - response handler
+- helper - arrayHelper
+- utils - datePicker  , inputField  , jsonto Object
+ - Model
+    - Payment DB Call
+    - all DB in model
+- Controller
+    - Payment business logic handle
+    - handle model
+    - no DB call in controller
+- Service
+    - Payment Service
+        - 3rd party services call
+        - Stripe
+        - appex
+        - account service
+        - handle model
+
+
+Frontend -> api GW -> AlB -> Service -> Queuing System -> Worker
+                            Adpater                      Adapter
+
+### Service
+- Has a public api endpoint 
+- It can be called by the frontend
+- It will assign workers to do the job and it will be done in the background.
+
+
+### Worker
+- Worker has no connection with third party services.
+- It works internally inside the VPS. 
+- Worker can not call services . 
+- Worker does all the heavy works.
+- Worker can call other workers.
+
+### Adapter
+- Does outgoing calls to third party services.
+
+tally 3rd api -
+
+
+Initial setup
+
+service1 -> tally
+
+service2 -> tally
+
+service3 -> tally
+
+service4 -> tally
+
+Adapter setup
+service1 -> Adapter
+
+service2 -> Adapter
+
+service3 -> Adapter    --> tally1 ( Will call tally single time)
+
+service4 -> Adapter
 
