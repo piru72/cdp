@@ -348,3 +348,6 @@ service3 -> Adapter    --> tally1 ( Will call tally single time)
 
 service4 -> Adapter
 
+## Class 19
+Code Was reviewed.
+- Use query api for GSI (Global Secondary Index)
