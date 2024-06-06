@@ -351,3 +351,10 @@ service4 -> Adapter
 ## Class 19
 Code Was reviewed.
 - Use query api for GSI (Global Secondary Index)
+
+## Class 23
+- Serverless Handson
+- EDD
+- MFS
+- SQS
+- SAM CLI
