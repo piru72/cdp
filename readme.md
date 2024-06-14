@@ -358,3 +358,15 @@ Code Was reviewed.
 - MFS
 - SQS
 - SAM CLI
+
+## Class 24
+- SQS
+- SNS
+- API Gate away
+- Visibility Timeout
+- Microservices ram size is at max 2 GB
+- EC2 ram size is at max 32 GB
+- Middy boilerplate for CRUD operation with DynamoDB
+- Load Balancer 
+
+![alt text](class-note-24-0.png)
