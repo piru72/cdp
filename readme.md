@@ -370,3 +370,7 @@ Code Was reviewed.
 - Load Balancer 
 
 ![alt text](class-note-24-0.png)
+
+## Project Meeting 
+- Discussed about the project
+- Business Logic Provided
