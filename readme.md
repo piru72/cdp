@@ -374,3 +374,26 @@ Code Was reviewed.
 ## Project Meeting 
 - Discussed about the project
 - Business Logic Provided
+
+
+## Tools Used 
+### Postman
+- Used for API Testing and Documentation
+
+## Extetrnal Resources
+
+| Topic Name | Link |
+| --- | --- |
+| Gitflow | [Link](https://danielkummer.github.io/git-flow-cheatsheet/)|
+|  Event Loop | [Link](https://lnkd.in/gVBuzDsg) |
+| Hoisting | [Link](https://lnkd.in/gJcTMmT3) |
+| Scope (Chain) | [Link](https://lnkd.in/gEjUXsXu) |
+| the JavaScript Engine | [Link](https://lnkd.in/g9azp4Mg) |
+| Prototypal Inheritance | [Link](https://lnkd.in/grVwbyxg) |
+| Generators and Iterators | [Link](https://lnkd.in/gXFM9puE) |
+| Promises & Async/Await | [Link](https://lnkd.in/grUvzjQG) |
+| posts from the V8 team | [Link](https://v8.dev/blog) |
+|NPM | [Link](https://www.w3resource.com/slides/node-package-manager-commands-slides-presentation.php)|
+|DynamDB| [Link](https://www.w3resource.com/slides/node-package-manager-commands-slides-presentation.php)|
+
+
